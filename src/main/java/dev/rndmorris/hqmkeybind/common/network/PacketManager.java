@@ -10,7 +10,7 @@ import dev.rndmorris.hqmkeybind.common.network.packets.PacketOpenQuestbook;
 public abstract class PacketManager {
 
     public static final SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE
-        .newSimpleChannel(HqmKeybind.NAME.toLowerCase());
+        .newSimpleChannel(HqmKeybind.MODID.toLowerCase());
 
     public static void init() {
         INSTANCE.registerMessage(HandlerOpenQuestbook.class, PacketOpenQuestbook.class, 0, Side.SERVER);
